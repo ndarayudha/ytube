@@ -1,0 +1,16 @@
+project_name: youtubedr
+
+builds:
+  - env:
+      - CGO_ENABLED=0
+  - main: ./cmd/youtubedr
+    binary: youtubedr
+    goos:
+      - linux
+      - windows
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    flags:
+      - -trimpath
